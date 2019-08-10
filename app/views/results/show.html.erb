@@ -1,0 +1,82 @@
+<% content_for :breadcrumb do %>
+  <li class="breadcrumb-item"><%= link_to "Home", root_path %></li>
+  <li class="breadcrumb-item active">Results (show & export)
+  &nbsp;
+  <%= link_to "Download as CSV", results_export_path(format: "csv") %> |
+  <%= link_to "Download as Excel", results_export_path(format: "xls") %></li>
+<% end %>
+
+<% if @answers.size > 0 %>
+  <div class="container">
+    <span class="label label-primary active">No forms submitted</span>
+  </div>
+<% else %>
+  <div class="container">
+  <h4 class="display-20">Form A</h4>
+  <div class="row justify-content-center">
+    <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Answer</th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <% @answers.where(:form_id => 1).each do |answer| %>
+          <tr>
+            <td><%= answer.question_text %></td>
+            <td><%= answer.value %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  </div>
+
+  <div class="container">
+  <h4 class="display-20">Form B</h4>
+  <div class="row justify-content-center">
+    <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Answer</th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <% @answers.where(:form_id => 2).each do |answer| %>
+          <tr>
+            <td><%= answer.question_text %></td>
+            <td><%= answer.value %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  </div>
+
+  <div class="container">
+  <h4 class="display-20">Form C</h4>
+  <div class="row justify-content-center">
+    <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Answer</th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <% @answers.where(:form_id => 3).each do |answer| %>
+          <tr>
+            <td><%= answer.question_text %></td>
+            <td><%= answer.value %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  </div>
+<% end %> 

@@ -1,0 +1,50 @@
+en:
+  forms:
+    index:
+      horizontal:
+        link: Fill Form B
+        subtitle: Option 1 form
+        title: Form B title
+      inline:
+        link: Fill Form C
+        subtitle: Option 2 form
+        title: Form C title
+      vertical:
+        link: Fill Form A
+        subtitle: Results of Form B or C
+        title: Form A title
+  helpers:
+    submit:
+      form:
+        create: "Create %{model}!"
+  simple_form:
+    labels:
+      form:
+        email: Email address
+        first_kiss: First kiss
+    hints:
+      form:
+        color: Please choose 1 option
+    options:
+      form:
+        color:
+          red: Red
+          pink: Pink
+          violet: Violet
+          indigo: Indigo
+          blue: Blue
+          teal: Teal
+          green: Green
+          yellow: Yellow
+        language:
+          en: English
+    prompts:
+      form:
+        language: Select your Language
+    placeholders:
+      form:
+        name: Your name
+        email: Enter email
+        password: Password
+        bio: Tell us your story
+        friends: Number of Friends

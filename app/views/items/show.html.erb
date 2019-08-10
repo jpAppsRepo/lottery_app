@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Худалдан авсан огноо:</strong>
+  <%= @item.purchase_date %>
+</p>
+
+<p>
+  <strong>Утасны дугаар:</strong>
+  <%= @item.phone_number %>
+</p>
+
+<p>
+  <strong>Овог:</strong>
+  <%= @item.surname %>
+</p>
+
+<p>
+  <strong>Нэр:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Худалдан авсан бүтээгдэхүүн:</strong>
+  <%= @item.product_name %>
+</p>
+
+<p>
+  <strong>Үнийн дүн:</strong>
+  <%= @item.price_info %>
+</p>
+
+<p>
+  <strong>Утасны IMEI код:</strong>
+  <%= @item.phone_imei %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

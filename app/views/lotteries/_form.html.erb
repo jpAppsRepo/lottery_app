@@ -1,0 +1,13 @@
+
+<%= simple_form_for(@lottery) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :phone_number %>
+    <%= f.input :lottery_number %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

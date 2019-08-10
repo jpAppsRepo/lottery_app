@@ -1,0 +1,7 @@
+<%= form_for @archive, html: { multipart: false } do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :attachment %>
+    <%= f.file_field :attachment %>
+    <%= f.submit "Save", class: "btn btn-primary" %>
+<% end %>

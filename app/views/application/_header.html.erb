@@ -1,0 +1,22 @@
+<div class="app-header">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <%= link_to "Lottery Submission Application", root_path, class: "navbar-brand" %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar-header">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+          <%= content_tag(:li, link_to("Lottery", lotteries_path, class: "nav-link"), class: "nav-item #{is_active?(lotteries_path)}") %>
+          <% if user_signed_in? %>
+            <%= content_tag(:li, link_to("Log out", destroy_user_session_path, method: :delete, class: "nav-link"), class: "nav-item #{is_active?(results_path)}") %>
+          <% else %>
+            <%= content_tag(:li, link_to("Login", new_user_session_path, class: "nav-link"), class: "nav-item #{is_active?(results_path)}") %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

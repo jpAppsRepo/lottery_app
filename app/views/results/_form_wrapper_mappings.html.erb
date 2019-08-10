@@ -1,0 +1,27 @@
+<%= simple_form_for @form, url: forms_vertical_path,
+  wrapper_mappings: {
+    check_boxes:    :vertical_collection,
+    radio_buttons:  :vertical_collection,
+    file:           :custom_file,
+    boolean:        :custom_boolean_switch
+  } do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :email %>
+
+  <%= f.input :password %>
+
+  <%= f.input :avatar, as: :file %>
+
+  <%= f.input :pill, as: :radio_buttons,
+    collection: ['Red', 'Blue'] %>
+
+  <%= f.input :choices, as: :check_boxes,
+    collection: [
+      "Option one is this and that—be sure to include why it's great",
+      "Option two can be something else and selecting it will deselect option one"] %>
+
+  <%= f.input :terms %>
+
+  <%= f.button :submit %>
+<% end %>

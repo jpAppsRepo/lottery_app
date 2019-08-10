@@ -1,0 +1,18 @@
+
+<%= simple_form_for(@item) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :purchase_date %>
+    <%= f.input :phone_number %>
+    <%= f.input :surname %>
+    <%= f.input :name %>
+    <%= f.input :product_name %>
+    <%= f.input :price_info %>
+    <%= f.input :phone_imei %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

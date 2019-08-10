@@ -1,0 +1,50 @@
+<% content_for :breadcrumb do %>
+  <li class="breadcrumb-item"><%= link_to "Home", root_path %></li>
+  <li class="breadcrumb-item active">Results (show & export)</li>
+<% end %>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-10">See form results & export</h1>
+    <ol>
+      <li>Show form results <code>(Form A : Form B or Form C)</code></li>
+      <li>Export results to <code>CSV</code> or <code>Excel</code></li>
+    </ol>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <% if @patients.size == 0 %>
+      <span class="label label-primary active">No patients recorded</span>
+    <% else %>
+      <table class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Patient ID</th>
+            <th>Patient Name</th>
+            <th>Form completed</th>
+            <th colspan="2"></th>
+          </tr>
+        </thead>
+      
+        <tbody>
+          <% @patients.each do |patient| %>
+            <tr>
+              <td><%= patient.id %></td>
+              <td><%= patient.email %></td>
+              <td>
+                <% if patient.status == 1 %>
+                  <span class="label label-primary active">YES</span>
+                <% else %>
+                  <span class="label label-success inactive">NO</span>
+                <% end %>
+              </td>
+              <td><%= link_to "Show results", results_show_path(patient.id) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+</div>
