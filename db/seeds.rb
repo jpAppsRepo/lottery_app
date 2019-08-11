@@ -19,6 +19,14 @@ User.create(email: "admin1@gmail.com", password: "12345678", role_id: 1)
   Item.create(purchase_date: purchase_date , phone_number: phone_number, surname: surname,
      name: name, product_name: product_name, price_info: price_info, phone_imei: phone_imei )
 end
+
+# add lotteries
+Lottery.create(phone_number: '99001122', lottery_number: '00000')
+Lottery.create(phone_number: '99001122', lottery_number: '00001')
+Lottery.create(phone_number: '99001122', lottery_number: '00010')
+Lottery.create(phone_number: '99880000', lottery_number: '80000')
+Lottery.create(phone_number: '99880000', lottery_number: '88000')
+
 # Demo patient
 # User.create(email: "patient1@gmail.com", password: "12345678", role_id: 1)
 # User.create(email: "patient2@gmail.com", password: "12345678", role_id: 1)

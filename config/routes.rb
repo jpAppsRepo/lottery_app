@@ -20,4 +20,11 @@ Rails.application.routes.draw do
       resources :answers
     end
   end
+
+  namespace :api do
+    namespace :v1 do
+      get 'lotteries/:phone_number', to: 'api#lotteries_by_phone_number', :as => 'lotteries_by_phone_number'
+    end
+  end
+
 end
