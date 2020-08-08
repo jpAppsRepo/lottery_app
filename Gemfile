@@ -55,7 +55,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Custom
 gem 'inline_svg', '~> 1.3', '>= 1.3.1'
 gem 'jquery-rails'
-gem 'kramdown', '~> 2.0'
+gem 'kramdown', '~> 2.3'
 gem 'kramdown-parser-gfm', '~> 1.0', '>= 1.0.1'
 gem 'rails-i18n', '~> 5.1'
 gem 'rouge', '~> 3.3'
